@@ -1,5 +1,18 @@
-let minValue = parseInt(prompt('Минимальное знание числа для игры','1'));
+let minValue = parseInt (prompt('Минимальное знание числа для игры','1'));
 let maxValue = parseInt(prompt('Максимальное знание числа для игры','100'));
+if (!minValue || null) {
+    result = minValue = 1
+    }
+    if (!maxValue || null) {
+        result = maxValue = 100
+    } 
+    
+    if (maxValue > 999) {
+     result = maxValue = 999 
+    } 
+    if (minValue < -999) {
+     result = minValue = -999 }
+
 alert(`Загадайте любое целое число от ${minValue} до ${maxValue}, а я его угадаю`);
 let answerNumber  = Math.floor((minValue + maxValue) / 2);
 let orderNumber = 1;
